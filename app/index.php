@@ -1,17 +1,25 @@
 <?php
 
-// QUERY STRING
-//var_dump ($_GET['name']);
-//$name = 'Alba';
+require 'app/helpers.php';
 
-// API
-function greet() {
-    $name = htmlspecialchars($_GET['name']);
-    $surname = $_GET['surname'];
+require 'app/Task.php';
 
-    return "Hola $name $surname!";
+require 'config.php';
+//connect -> API nom connect, sense parametres entrada i tornara objecte $dbh
+try {
+    $dbh = new PDO(
+        $config['database']['databasetype'] . ':host=' . $config['database']['host'] . ';dbname=' . $config['database']['name'],
+        $config['database']['user'],
+        $config['database']['password']);
+} catch (\Exception $e) {
+    echo 'Error de connexió a la base de dades';
 }
 
-$greeting = greet();
+$statement = $dbh->prepare('SELECT * FROM tasks;');
 
-//$greeting = 'Hola ' . $_GET['name'] . ' '. $_GET['name'] .  '!';
+$statement->execute();
+
+//fetchAllTasks
+$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+
+$greeting = greet(); '!';
