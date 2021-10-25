@@ -1,9 +1,9 @@
 <?php
 
-$config = [
+return  [
     'database' => [
         'user' => 'debian-sys-maint',
-        'password' => 'ri48e17r9cfJIqGu',
+        'password' => '2CKkJCsas4PlQnDM',
         'databasetype' => 'mysql',
         'host' => 'localhost',
         'name' => 'phplaraveldevs',
