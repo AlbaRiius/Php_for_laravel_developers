@@ -1,10 +1,16 @@
 <?php
 
+use framework\Database\Database;
+
 $config = require 'config.php';
 require 'helpers.php';
-require 'Task.php';
 
 
-$tasks = fetchAllTasks(connectDB($config));
+
+
+
+$database = new Database($config);
+$tasks = $database->selectAll('tasks');
+//$tasks = Database::selectAll('tasks'); //Crida estàtica sense new
 
 $greeting = greet();

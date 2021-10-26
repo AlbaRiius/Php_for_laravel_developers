@@ -1,0 +1,17 @@
+{
+    "name": "alba/php_for_laravel_developers",
+    "description": "bla",
+    "type": "project",
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "authors": [
+        {
+            "name": "AlbaRiius",
+            "email": "arius@iesebre.com"
+        }
+    ],
+    "require": {}
+}
