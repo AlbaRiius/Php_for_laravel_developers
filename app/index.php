@@ -1,16 +1,12 @@
 <?php
 
+use framework\App;
 use framework\Database\Database;
 
-$config = require 'config.php';
 require 'helpers.php';
 
-
-
-
-
-$database = new Database($config);
-$tasks = $database->selectAll('tasks');
+//$database = new Database(App::get('config')['database']);
+$tasks = App::get('database')->selectAll('tasks');
 //$tasks = Database::selectAll('tasks'); //Crida estàtica sense new
 
 $greeting = greet();
