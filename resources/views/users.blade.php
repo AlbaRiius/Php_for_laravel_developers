@@ -5,7 +5,7 @@
     <header>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold leading-tight text-gray-900">
-                Tasks
+                Users
             </h1>
         </div>
     </header>
@@ -24,13 +24,10 @@
                                         Id
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Title
+                                        Name
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Description
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Completed
+                                        Surname
                                     </th>
                                     <th scope="col" class="relative px-6 py-3">
                                         <span class="sr-only">Edit</span>
@@ -38,49 +35,23 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($tasks as $task): ?>
+                                <?php foreach ($users as $user): ?>
                                 <!-- Odd row -->
                                 <tr class="bg-white">
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                        <?=$task->id;?>
+                                        <?=$user->id;?>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        <?=$task->title;?>
+                                        <?=$user->name;?>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        <?=$task->description;?>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        <?=$task->completed;?>
+                                        <?=$user->surname;?>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
-
-
-
-                                <!-- Even row -->
-                                <!-- <tr class="bg-gray-50">
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                        Cody Fisher
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        Product Directives Officer
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        cody.fisher@example.com
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        Owner
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-                                    </td>
-                                </tr> -->
-
-                                <!-- More people... -->
                                 </tbody>
                             </table>
                         </div>
