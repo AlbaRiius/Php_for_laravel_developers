@@ -9,3 +9,6 @@ $tasks = App::get('database')->selectAll('tasks');
 //$tasks = Database::selectAll('tasks'); //Crida estàtica sense new
 
 $greeting = greet();
+
+require 'resources/views/index.blade.php';
+
