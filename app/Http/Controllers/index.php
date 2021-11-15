@@ -8,7 +8,6 @@ use framework\Database\Database;
 $tasks = App::get('database')->selectAll('tasks');
 //$tasks = Database::selectAll('tasks'); //Crida estàtica sense new
 
-$greeting = "Alba Rius Rivas";
 
 require '../resources/views/index.blade.php';
 
